@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="feedstyle.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 sidebar-page-container">
+      <div class="sidebar" style="width:80%;border-radius:10px">
+        <div class="sidebar-widget sidebar-post">
+          <div class="widget-title" style="padding-left: 15px;padding-top: 15px;padding-bottom: 7px;">
+            <h3>Feed</h3>
+          </div>
+          <div class="post-inner" id="postInner">
+            <div class="carousel-inner-data" style="overflow: hidden;">
+              <ul id="contentList">
+                <!-- Add some initial content -->
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <li>
+                  <div class="post">
+                    <div class="post-date">
+                      <p>06</p><span>july</span>
+                    </div>
+                    <div class="file-box"><i class="far fa-folder-open"></i>
+                      <p>Subject</p>
+                    </div>
+                    <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+                  </div>
+                </li>
+                <!-- Repeat the list items as needed -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var maxRows = 7; // Set the maximum number of rows
+    var currentPage = 1;
+
+    function loadMoreContent() {
+      // Simulate fetching more content, append to the list
+      for (var i = 0; i < maxRows; i++) {
+        $('#contentList').append(`
+            <li>
+              <div class="post">
+                <div class="post-date">
+                  <p>${currentPage * maxRows + i}</p><span>Month</span>
+                </div>
+                <div class="file-box"><i class="far fa-folder-open"></i>
+                  <p>Subject</p>
+                </div>
+                <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="post">
+                <div class="post-date">
+                  <p>${currentPage * maxRows + i}</p><span>Month</span>
+                </div>
+                <div class="file-box"><i class="far fa-folder-open"></i>
+                  <p>Subject</p>
+                </div>
+                <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+              </div>
+            </li>
+            <li>
+              <div class="post">
+                <div class="post-date">
+                  <p>${currentPage * maxRows + i}</p><span>Month</span>
+                </div>
+                <div class="file-box"><i class="far fa-folder-open"></i>
+                  <p>Subject</p>
+                </div>
+                <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a></h5>
+              </div>
+            </li>
+          `);
+      }
+      currentPage++;
+    }
+
+    $(window).scroll(function() {
+      if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        loadMoreContent();
+      }
+    });
+  });
+</script>
+</body>
+</html>
