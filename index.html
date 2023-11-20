@@ -52,16 +52,15 @@
     <img alt="" src="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/mypro-hat2cb/assets/73ex35r6yirh/logo_atualizado.svg">
 </div>
 <div class="container">
-    <div class="bottom-div">
-        <script>
-            fetch('wave.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('bottom-div').innerHTML = data;
-                })
-                .catch(error => console.error('Error:', error));
-        </script>
-    </div>
+    <div class="bottom-div" id="bottom-div"></div>
+    <script>
+        fetch('wave.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('bottom-div').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
 </div>
 </body>
 </html>
