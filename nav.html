@@ -1,3 +1,4 @@
+
 <style>
   :root {
     --underline-height: .5em;
@@ -8,7 +9,7 @@
     font-family: system-ui, sans-serif;
     background: #ffffff;
     min-height: 100vh;
-    font-size: 20px;
+    font-size: 22px;
   }
   @-moz-document url-prefix() {
     body {
@@ -35,7 +36,7 @@
     bottom: 0;
     left: 0;
     height: var(--underline-height);
-    width: 15%;
+    width: 20%;
     background: black;
     pointer-events: none;
     mix-blend-mode: multiply;
@@ -57,7 +58,7 @@
   a {
     display: inline-block;
     z-index: 10;
-    width: 15%;
+    width: 20%;
     padding: 1em 0;
     text-align: center;
     cursor: pointer;
@@ -122,14 +123,13 @@
 
 
 <html>
-<head>
-  <!-- Your head content here -->
-</head>
-<body>
 <header>
   <nav class="black">
-    <a class="nava" style="font-size:18px" href="#" onclick="ul(0)">Home</a>
-    <a class="nava" style="font-size:18px" href="#" onclick="ul(1)">About</a>
+    <div class="underline"></div>
+    <div class="underline"></div>
+    <div class="underline"></div>
+    <a class="nava" style="font-size:20px" href="#" onclick="ul(0)">Home</a>
+    <a class="nava" style="font-size:20px" href="#" onclick="ul(1)">About</a>
     <div class="dropdown" style="float:right;">
       <button class="dropbtn">
         <div class="dive" style="height: 4px;background-color: black;margin: 6px 0;"></div>
@@ -137,19 +137,13 @@
         <div class="dive" style="height: 4px;background-color: black;margin: 6px 0;"></div>
       </button>
       <div class="dropdown-content">
-        <a href="#">Login</a>
-        <a href="#">Sign up</a>
+        <a href="">Login</a>
+        <a href="">Sign up</a>
       </div>
     </div>
-
-    <!-- Example elements with the class name "underline" -->
-    <div class="underline"></div>
-    <div class="underline"></div>
-    <div class="underline"></div>
   </nav>
-</header>
 
-</body>
+</header>
 </html>
 
 
