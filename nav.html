@@ -1,0 +1,165 @@
+
+<style>
+  :root {
+    --underline-height: .5em;
+    --transition-duration : .5s;
+  }
+
+  body {
+    font-family: system-ui, sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    font-size: 22px;
+  }
+  @-moz-document url-prefix() {
+    body {
+      font-size: 100%;
+    }
+  }
+  .nava {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+  nav {
+    position: relative;
+    white-space: nowrap;
+    background: white;
+    padding: var(--underline-height) 0;
+    margin: 0;
+    box-shadow: 0 1em 2em rgba(black, .05);
+  }
+
+  .underline {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--underline-height);
+    width: 20%;
+    background: black;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    transition: transform var(--transition-duration) ease-in-out;
+
+  &:nth-child(1) {
+     background: yellow;
+     transition: calc(var(--transition-duration) * .8);
+   }
+  &:nth-child(2) {
+     background: cyan;
+     transition: calc(var(--transition-duration) * 1.2);
+   }
+  &:nth-child(3) {
+     background: magenta;
+   }
+  }
+
+  a {
+    display: inline-block;
+    z-index: 10;
+    width: 20%;
+    padding: 1em 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  nav.black {
+    .underline {
+    background: #222;
+    border-radius: .25em;
+    height: calc(var(--underline-height) / 2);
+    mix-blend-mode: initial;
+  }}
+
+  .dropbtn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: #ffffff;}
+
+  .dive{
+    width: 57px;
+    height: 7px;
+  }
+  @-moz-document url-prefix() {
+    .dive {
+      width: 20px;
+      height: 3px;
+    }
+  }
+
+</style>
+
+
+<html>
+<head>
+  <!-- Your head content here -->
+</head>
+<body>
+<header>
+  <nav class="black">
+    <div class="underline"></div>
+    <div class="underline"></div>
+    <div class="underline"></div>
+    <a class="nava" style="fonte-size:36px" href="#" onclick="ul(0)">Home</a>
+    <a class="nava" style="fonte-size:36px" href="#" onclick="ul(1)">About</a>
+    <div class="dropdown" style="float:right;">
+      <button class="dropbtn">
+        <div class="dive" style="height: 4px;background-color: black;margin: 6px 0;"></div>
+        <div class="dive" style="height: 4px;background-color: black;margin: 6px 0;"></div>
+        <div class="dive" style="height: 4px;background-color: black;margin: 6px 0;"></div>
+      </button>
+      <div class="dropdown-content">
+        <a href="login.php">Login</a>
+        <a href="register.php">Sign up</a>
+      </div>
+    </div>
+  </nav>
+
+</header>
+</body>
+</html>
+
+
+<script>
+  function ul(index) {
+    console.log('click!' + index)
+
+    var underlines = document.querySelectorAll(".underline");
+
+    for (var i = 0; i < underlines.length; i++) {
+      underlines[i].style.transform = 'translate3d(' + index * 100 + '%,0,0)';
+    }
+  }
+</script>
