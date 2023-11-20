@@ -1,0 +1,112 @@
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 90%;
+  }
+
+  footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .waveAnimation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .w1 {
+    stroke: none;
+    fill: #259f26;
+    opacity: 55%;
+    animation: move1 5s ease-in-out infinite;
+  }
+  .w2 {
+    stroke: none;
+    fill: #c7d548;
+    opacity: 35%;
+    transform: translate3d(0, 0, 0);
+    animation: move2 4s ease-in-out infinite;
+  }
+  .w3 {
+    stroke: none;
+    fill: #fff963;
+    opacity: 30%;
+    transform: translate3d(0, 0, 0);
+    animation: move3 6s ease-in-out infinite;
+  }
+  @keyframes move1 {
+    0% {
+      transform: translateX(-500px) scaleX(2.5);
+    }
+    25% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    50% {
+      transform: translateX(0) scaleX(2.5);
+    }
+    75% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    100% {
+      transform: translateX(-500px) scaleX(2.5);
+    }
+  }
+  @keyframes move2 {
+    0% {
+      transform: translateX(-600px) scaleX(3);
+    }
+    25% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    50% {
+      transform: translateX(0) scaleX(3);
+    }
+    75% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    100% {
+      transform: translateX(-600px) scaleX(3);
+    }
+  }
+  @keyframes move3 {
+    0% {
+      transform: translateX(-800px) scaleX(3);
+    }
+    25% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    50% {
+      transform: translateX(0) scaleX(3);
+    }
+    75% {
+      transform: translateX(-100) scaleX(2.5);
+    }
+    100% {
+      transform: translateX(-800px) scaleX(3);
+    }
+  }
+</style>
+
+
+<footer>
+  <div class="waveAnimation">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path
+              class="w1 waveTop"
+              d="M-8.74,71.55 C289.78,255.11 349.60,4.47 505.36,34.05 L500.00,150.00 L0.00,150.00 Z"
+      />
+      <path
+              class="w2 waveMiddle"
+              d="M-23.42,125.83 C187.63,45.89 299.38,57.73 526.80,123.86 L500.00,150.00 L0.00,150.00 Z"
+      />
+      <path
+              class="w3 waveBottom"
+              d="M-23.42,125.83 C172.96,-152.44 217.55,183.06 504.22,55.77 L500.00,150.00 L0.00,150.00 Z"
+      />
+    </svg>
+  </div>
+</footer>
