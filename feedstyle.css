@@ -86,7 +86,7 @@
 }
 .carousel-inner-data{
     margin:0px auto;
-    height:fit-content;
+    height:auto;
     overflow:hidden;
 }
 .carousel-inner-data ul{
