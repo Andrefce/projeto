@@ -87,7 +87,7 @@
 .carousel-inner-data{
     margin:0px auto;
     height:fit-content;
-    overflow:auto;
+    overflow:hidden;
 }
 .carousel-inner-data ul{
     list-style:none;
