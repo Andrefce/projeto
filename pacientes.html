@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -16,20 +17,20 @@
       </div>
     </div>
     <ul class="sidebar-list">
-      <li class="sidebar-list-item active">
+      <li class="sidebar-list-item">
         <a href="dashboard.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span>Exames Entregues</span>
         </a>
       </li>
-      <li class="sidebar-list-item">
+      <li class="sidebar-list-item active">
         <a href="pacientes.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
           <span>Pacientes</span>
         </a>
       </li>
       <li class="sidebar-list-item">
-        <a href="">
+        <a href="medicos_list.php">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
           <span>Médicos</span>
         </a>
@@ -91,14 +92,40 @@
       </div>
     </div>
     <div class="products-area-wrapper tableView">
-      <script>
-        fetch('feed.html')
-                .then(response => response.text())
-                .then(data => {
-                  document.querySelector('.products-area-wrapper.tableView').innerHTML = data;
-                })
-                .catch(error => console.error('Error:', error));
-      </script>
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+        <div class="product-cell image">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="product">
+          <span>Ocean</span>
+        </div>
+        <div class="product-cell category"><span class="cell-label">Category:</span>Furniture</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">Status:</span>
+          <span class="status active">Active</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+        <div class="product-cell stock"><span class="cell-label">Stock:</span>36</div>
+        <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+      </div>
+      <div class="products-row">
+        <button class="cell-more-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+        </button>
+        <div class="product-cell image">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+          <span>Lou</span>
+        </div>
+        <div class="product-cell category"><span class="cell-label">Category:</span>Kitchen</div>
+        <div class="product-cell status-cell">
+          <span class="cell-label">Status:</span>
+          <span class="status disabled">Disabled</span>
+        </div>
+        <div class="product-cell sales"><span class="cell-label">Sales:</span>6</div>
+        <div class="product-cell stock"><span class="cell-label">Stock:</span>46</div>
+        <div class="product-cell price"><span class="cell-label">Price:</span>$710</div>
+      </div>
     </div>
   </div>
 </div>
@@ -107,9 +134,10 @@
 <script src="dash.js"></script>
 <script> function logout() {
   // Use window.location.href to redirect to the logout.php page
-  window.location.href = 'index.html';
+  window.location.href = 'logout.php';
 }
 </script>
 
 </body>
 </html>
+
