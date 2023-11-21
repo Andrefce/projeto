@@ -22,7 +22,7 @@
     --filter-reset: #2c394f;
 }
 
-.dark:root {
+.night:root {
     --app-bg: #101827;
     --sidebar: rgba(21, 30, 47,1);
     --sidebar-main-color: #fff;
