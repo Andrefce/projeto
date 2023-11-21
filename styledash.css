@@ -222,6 +222,21 @@ body {
 .app-content-headerButton:hover {
     background-color: var(--action-color-hover);
 }
+.app-content-headerButton-unfollow {
+    background-color: var(--action-color);
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0 16px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.app-content-headerButton-unfollow:hover {
+    background-color: var(--action-color-hover);
+}
 
 .app-content-actions {
     display: flex;
@@ -541,6 +556,10 @@ body {
     cursor: pointer;
     transition: transform 0.2s;
     position: relative;
+}
+.gridView button {
+    margin-left: 35%;
+    margin-top:5%;
 }
 .gridView .products-row:hover {
     transform: scale(1.01);
