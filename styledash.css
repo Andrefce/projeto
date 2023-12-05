@@ -187,6 +187,7 @@ body {
 
 .app-content {
     padding: 30px;
+    padding-right: 0px;
     background-color: var(--app-bg);
     height: 100%;
     flex: 1;
