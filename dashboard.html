@@ -98,15 +98,29 @@
         fetch('feed.html')
                 .then(response => response.text())
                 .then(data => {
-                  document.querySelector('.products-area-wrapper.tableView').innerHTML = data;
+                  const container = document.querySelector('.products-area-wrapper.tableView');
+
+                  // Insert the fetched HTML content
+                  container.innerHTML = data;
+
+                  // Extract and execute scripts within the fetched content
+                  const tempDiv = document.createElement('div');
+                  tempDiv.innerHTML = data;
+                  const scripts = tempDiv.querySelectorAll('script');
+
+                  scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.innerText;
+                    document.head.appendChild(newScript); // Append scripts to the document's head
+                  });
                 })
                 .catch(error => console.error('Error:', error));
       </script>
     </div>
   </div>
+  </div>
 </div>
 </div>
-<!-- partial -->
 <script src="dash.js"></script>
 <script> function logout() {
   // Use window.location.href to redirect to the logout.php page

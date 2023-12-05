@@ -37,3 +37,5 @@ modeSwitch.addEventListener('click', function () {
     var currentMode = document.documentElement.classList.contains('light') ? 'night' : 'day';
     localStorage.setItem('mode', currentMode);
 });
+
+
